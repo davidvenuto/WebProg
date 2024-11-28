@@ -15,11 +15,14 @@
 
     <h1>Add To-Do Item</h1>
 
-    <form action="/add-todo" method="POST">
+    <form id="todo-form" action="/add-todo" method="POST">
         <label for="todo-item">To-Do Item:</label>
         <input type="text" id="todo-item" name="todo-item" required>
 
         <input type="submit" value="Add Item">
     </form>
+
+    <!-- Include the JavaScript file -->
+    <script src="todoScript.js"></script>
 </body>
 </html>

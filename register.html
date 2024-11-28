@@ -17,20 +17,26 @@
 
     <img src="images/register.jpg" alt="Register" width="400" height= "300">
 
-    <form action="/register" method="POST">
+    <form id="register-form" action="/register" method="POST">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="first-name" required>
 
         <label for="last-name">Last Name:</label>
         <input type="text" id="last-name" name="last-name" required>
 
-        <label for="username-email">Username or Email:</label>
-        <input type="text" id="username-email" name="username-email" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
         <input type="submit" value="Register">
     </form>
+
+    <!-- Include the JavaScript file -->
+    <script src="registerScript.js"></script>
 </body>
 </html>

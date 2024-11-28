@@ -14,7 +14,10 @@
     </nav>
 
     <h1>Login</h1>
-    <form action="/login" method="POST">
+
+    <img src="images/login.jpg" alt="Login" width="400" height="300">
+
+    <form id="login-form" action="/login" method="POST">
         <label for="username-email">Username or Email:</label>
         <input type="text" id="username-email" name="username-email" required>
 
@@ -23,5 +26,8 @@
 
         <input type="submit" value="Login">
     </form>
+
+    <!-- Include the JavaScript file -->
+    <script src="loginScript.js"></script>
 </body>
 </html>
