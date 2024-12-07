@@ -33,9 +33,6 @@ async function updateUser(user) {
   return { message: "User updated successfully." };
 }
 
-module.exports = { register, login, getAllUsers, userExists, deleteUser, updateUser };
-
-
 async function register(user) {
   const { FullName, Username, Email, Password } = user;
 
@@ -64,4 +61,4 @@ async function getAllUsers() {
   return await con.query(sql);
 }
 
-module.exports = { register, login, getAllUsers, userExists };
+module.exports = { register, login, getAllUsers, userExists, deleteUser, updateUser };
