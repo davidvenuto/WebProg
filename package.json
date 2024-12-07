@@ -1,0 +1,20 @@
+{
+  "name": "webprog",
+  "version": "1.0.0",
+  "description": "![Capture](https://github.com/user-attachments/assets/a10c4b34-e3f2-4fb8-aaa6-70cbd0b9bffe)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
