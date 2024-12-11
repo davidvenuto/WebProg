@@ -1,3 +1,4 @@
+import { fetchData } from './utils.js';
 class User {
     constructor(fullName, username, email, password) {
         this.fullName = fullName;
@@ -23,5 +24,8 @@ function register(event) {
 
     const newUser = new User(fullName, username, email, password);
 
-    console.log(newUser);
+    fetchData('/register', newUser, 'POST')
+        .then(response => console.log('Registration successful:', response))
+        .catch(error => console.error('Registration failed:', error));
 }
+

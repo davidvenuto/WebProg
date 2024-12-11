@@ -1,3 +1,4 @@
+import { fetchData } from './utils.js';
 class User {
     constructor(usernameOrEmail, password) {
         this.usernameOrEmail = usernameOrEmail;
@@ -17,5 +18,7 @@ function handleLogin(event) {
 
     const loginUser = new User(usernameOrEmail, password);
 
-    console.log(loginUser);
+    fetchData('/login', loginUser, 'POST')
+        .then(response => console.log('Login successful:', response))
+        .catch(error => console.error('Login failed:', error));
 }

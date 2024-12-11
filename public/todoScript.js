@@ -1,3 +1,5 @@
+import { fetchData } from './utils.js';
+
 class ToDoItem {
     constructor(title) {
         this.title = title;
@@ -13,7 +15,11 @@ function handleTodoSubmit(event) {
 
     const title = document.getElementById('todo-item').value;
 
-    const newToDoItem = new ToDoItem(title);
+    const newToDoItem = { title }; // Adjusted object structure for direct use
+    console.log("To-Do item being sent:", newToDoItem); // Debugging
 
-    console.log(newToDoItem);
+    fetchData('/todos/add', newToDoItem, 'POST')
+        .then(response => console.log('To-Do item added successfully:', response))
+        .catch(error => console.error('Adding To-Do item failed:', error));
 }
+
